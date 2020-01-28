@@ -6,24 +6,37 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You bump into a girl at school and she drops her books.",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Help her!",
+                    nextLevel: "conversation",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Keep on moving.",
+                    nextLevel: "chivalry",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+        conversation: {
+            message: "You both apologize at the same time; she tells you she's new to the school",
+            choices: [
+                {
+                    text: "Show her around the school",
+                    nextLevel: "bond",
+                },
+
+                {
+                    text: "Make an excuse to escape the conversation",
+                    nextLevel: "wuss",
+                },    
+            ]
+        },
+
+        chivalry: {
+            message: "I guess chivalry is dead...",
             choices: [
                 {
                     text: "Start over",
@@ -32,15 +45,14 @@ var game = {
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        bond: {
+            message: "A bond is formed and she asked for you to do something with her sometime.",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Great! You've scored yourself a date!",
+                    nextLevel: "start"
                 },
             ]
-        },
-
-    }
+        }   
+    }     
 };
