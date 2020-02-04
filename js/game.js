@@ -2,7 +2,7 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "hallway.jpg",
     levels: {
 
         start: {
@@ -31,7 +31,7 @@ var game = {
                 {
                     text: "Make an excuse to escape the conversation",
                     nextLevel: "wuss",
-                },    
+                },  
             ]
         },
 
@@ -49,10 +49,35 @@ var game = {
             message: "A bond is formed and she asked for you to do something with her sometime.",
             choices: [
                 {
-                    text: "Great! You've scored yourself a date!",
+                    text: "Decline",
+                    nextLevel: "wuss"
+                },
+
+                {
+                    text: "Agree",
+                    nextLevel:"date"
+                }
+            ]
+        },
+        
+        wuss: {
+            message: "Way to go buddy...",
+            choices: [
+                {
+                    text:  "Start over",
                     nextLevel: "start"
                 },
             ]
-        }   
+        },
+        
+        date: {
+            message: "Great! You've scored yourself a date!",
+            choices: [
+                {
+                    text: "Start over",
+                    nextLevel: "start"
+                }
+            ]
+        }
     }     
 };
